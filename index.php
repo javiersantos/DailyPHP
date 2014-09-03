@@ -30,7 +30,8 @@
 	$iconos = array();
 	$stats = array(
 		'ok' => 0,
-		'ko' => 0,);
+		'ko' => 0,
+		'meh' => 0,);
 
 	// Ajustes
 	if (bisiesto($year)) { $total_days = 366; } 
@@ -54,11 +55,17 @@
 		if ($myyear->day[$i] == 'ok') {
 			$face = ':)';
 			$stats['ok']++;
-		} else {
-			$face = ':(';
-				$stats['ko']++;
 		}
 
+		if ($myyear->day[$i] == 'ko') {
+			$face = ':(';
+			$stats['ko']++;
+		}
+
+		if ($myyear->day[$i] == 'meh') {
+			$face = ':|';
+			$stats['meh']++;
+		}
 
 		$nodo = $myyear->day[$i]['id']-1;
 		$iconos[$nodo]['day'] = $myyear->day[$i];
