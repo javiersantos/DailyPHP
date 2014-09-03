@@ -18,7 +18,7 @@ $c_black:#424242;
 $c_face:#ccc;
 $c_face_ok:#fc0;
 $c_face_ko:#ff5335;
-$c_face_meh:#FFA500;
+$c_face_meh:#fc0;
 
 $f_base:'Varela Round', arial,sans-serif;
 $m_px:16;
@@ -67,11 +67,11 @@ body{
 	color:$c_black;
 	}
 .face.ko{
-	background:#ff5335;
+	background:$c_face_ko;
 	color:#fff;
 	}
 .face.meh{
-	background:#FFA500;
+	background:$c_face_meh;
 	color:#fff;
 	}
 .date{display:none;}
